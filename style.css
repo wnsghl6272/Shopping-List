@@ -3,6 +3,7 @@
   --color-blue: #3b5999;
   --color-white: #ffffff;
   --color-light-grey: #dfdfdf;
+  --color-light-blue: #ced3df;
 
   /* size */
   --size-extrasmall: 10px;
@@ -16,45 +17,111 @@
 }
 
 body {
-  margin: 0;
+  background-color: var(--color-light-grey);
+  text-align: center;
+}
+
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
   padding: 0;
+  margin: 0;
 }
 
 li {
   list-style: none;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  align-content: center;
+.list {
+  width: 400px;
+  margin: auto;
+  background-color: var(--color-white);
+  border-radius: var(--size-small);
+  -webkit-box-shadow: 5px 5px 15px 4px #000000;
+  box-shadow: 5px 5px 15px 4px #000000;
 }
 
 .title {
-  background-color: var(--color-blue);
-  width: 100%;
-  text-align: center;
+  height: 5vh;
+  padding: var(--size-extrasmall);
+  font-size: var(--size-medium);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    27deg,
+    rgba(2, 0, 36, 0.908000700280112) 0%,
+    rgba(160, 184, 227, 1) 37%,
+    rgba(180, 180, 223, 1) 92%,
+    rgba(0, 134, 255, 1) 100%
+  );
   color: var(--color-white);
-  padding: var(--size-small);
+  border-radius: 20px 20px 0 0;
+}
+
+.items {
+  height: 50vh;
+  overflow-y: auto;
+  background-color: var(--color-light-blue);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 32px;
+  font-size: vaR(--size-small);
+}
+
+.divider {
+  width: 90%;
+  height: 1px;
+  background-color: grey;
+  margin: auto;
+}
+
+.delete {
   font-size: var(--size-small);
-  margin-right: var(--size-small);
-  font-size: 30px;
-  font-weight: bold;
+  transition: all 100ms ease-in;
+}
+
+.delete:hover {
+  color: red;
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  background-color: var(--color-light-grey);
-  width: 100%;
-  padding: var(--size-extrasmall);
+  height: 7vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    27deg,
+    rgba(2, 0, 36, 0.908000700280112) 0%,
+    rgba(160, 184, 227, 1) 37%,
+    rgba(180, 180, 223, 1) 92%,
+    rgba(0, 134, 255, 1) 100%
+  );
+  border-radius: 0 0 20px 20px;
 }
 
 .wordInput {
   font-size: var(--size-small);
-  margin-right: var(--size-small);
+  width: 100%;
+  height: 27px;
+  border: none;
+  outline: none;
+}
+
+.addBtn {
+  width: 35px;
+  height: 35px;
+  font-size: var(--size-small);
+  transition: all 100ms ease-in;
+  border-radius: 50%;
+  background-color: var(--color-light-blue);
+}
+
+.addBtn:hover {
+  color: var(--color-blue);
+  transform: scale(1.1);
 }
