@@ -6,20 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/6a9ebaa41a.js" crossorigin="anonymous"></script>
     <title>Shopping List</title>
 </head>
 <body>
     <section class="container">
-        <div class="title">
-            Shopping List
-        </div>
-        <ul class="List">
-            <li class="shoppingList"><button class="delete"></button></li>
+        <header class="title">Shopping List</header>
+        <ul class="list">
+            <li class="shoppingList">
+                <div class="item">
+                    <span class="item__name">
+                        Apple
+                    </span>
+                    <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </li>
         </ul>
-        <div class="footer">
+        <footer class="footer">
+            <input class="wordInput" type="text">
             <button class="addBtn">
+                <i class="fas fa-plus"></i>
             </button>
-        </div>
+        </footer>
     </section>
 </body>
 </html>
