@@ -16,6 +16,7 @@ function onAdd() {
     //4. Refresh input after use insert
     input.value = "";
     input.focus();
+    item.scrollIntoView();
 }
 
 function createItem(text) {
