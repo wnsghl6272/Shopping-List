@@ -1,6 +1,12 @@
 const items = document.querySelector('.items');
 const input = document.querySelector('.wordInput');
 const addBtn = document.querySelector('.addBtn');
+const form = document.querySelector('.new__form');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    onAdd();
+});
 
 function onAdd() {
     //1. User insert input
@@ -37,19 +43,19 @@ function createItem(text) {
     return itemList;
 }
 
-addBtn.addEventListener('click', () => {
-    onAdd();
-});
+// // addBtn.addEventListener('click', () => {
+// //     onAdd();
+// // });
 
 
-input.addEventListener('keydown', (event) => {
-    if(event.isComposing) {
-        return;
-    }
-    if (event.key === 'Enter') {
-        onAdd();
-    }
-});
+// // input.addEventListener('keydown', (event) => {
+// //     if(event.isComposing) {
+// //         return;
+// //     }
+// //     if (event.key === 'Enter') {
+// //         onAdd();
+// //     }
+// // });
 
 items.addEventListener('click', (event) => {
     const id = event.target.dataset.id;
